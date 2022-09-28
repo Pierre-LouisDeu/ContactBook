@@ -6,27 +6,47 @@ import ContactCard from "../molecules/ContactCard";
 // };
 
 const contacts = [
-  { id: 1, name: "Bob", email: "bob@email.com", birthday: "01/01/2021" },
-  { id: 2, name: "Alan", email: "alan@email.com", birthday: "01/01/2021" },
+  {
+    id: 1,
+    firstName: "Bob",
+    lastName: "Bob",
+    email: "bob@email.com",
+    birthday: "01/01/2021",
+  },
+  {
+    id: 2,
+    firstName: "John",
+    lastName: "Alan",
+    email: "alan@email.com",
+    birthday: "01/01/2021",
+  },
   {
     id: 3,
-    name: "Juliette",
+    firstName: "Juliette",
+    lastName: "Z",
     email: "juliette@email.com",
     birthday: "09/09/2021",
   },
 ];
 
-const ContactList: React.FunctionComponent<any> = ({setOpen}) => {
+const ContactList: React.FunctionComponent<any> = ({ setOpen }) => {
   return (
     <>
       <div className="mt-2 w-full">
         {contacts.map(
-          (contact: { id: number, name: string; email: string; birthday: string }) => (
+          (contact: {
+            id: number;
+            firstName: string;
+            lastName: string;
+            email: string;
+            birthday: string;
+          }) => (
             <div className="py-2">
               <ContactCard
                 key={contact.id}
                 id={contact.id}
-                name={contact.name}
+                firstName={contact.firstName}
+                lastName={contact.lastName}
                 email={contact.email}
                 birthday={contact.birthday}
                 setOpen={setOpen}

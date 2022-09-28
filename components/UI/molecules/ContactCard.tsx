@@ -7,7 +7,8 @@ type setOpenType = {
 
 type ContactProps = {
   id: number;
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
   birthday: string;
   setOpen: setOpenType;
@@ -15,14 +16,15 @@ type ContactProps = {
 
 const ContactCard: React.FunctionComponent<ContactProps> = ({
   id,
-  name,
+  firstName,
+  lastName,
   email,
   birthday,
   setOpen,
 }) => {
   const { setContact } = useContext(ContactContext);
   const select = () => {
-    setContact(id);
+    setContact({ id, firstName, lastName, email, birthday });
     setOpen(true);
   };
 
@@ -36,7 +38,7 @@ const ContactCard: React.FunctionComponent<ContactProps> = ({
       >
         <div className="card bg-base-100 shadow-xl">
           <div className="card-body">
-            <h2 className="card-title justify-center ">{name}</h2>
+            <h2 className="card-title justify-center ">{firstName} {lastName}</h2>
             <p>{email}</p>
             <p>{birthday}</p>
           </div>
