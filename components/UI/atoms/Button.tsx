@@ -1,7 +1,7 @@
 import React from "react";
 
 type ActionType = {
-  (param: boolean): void;
+  (param: boolean | null): void;
 };
 
 type ButtonProps = {

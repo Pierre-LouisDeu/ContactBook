@@ -5,6 +5,7 @@ import Image from "next/image";
 import SearchBar from "..//UI/molecules/SearchBar";
 import ContactList from "../UI/organisms/ContactList";
 import NewButton from "../UI/molecules/NewButton";
+import SidePanel  from "../UI/organisms/SidePanel";
 
 const SlideOver: React.FunctionComponent = () => {
   const [open, setOpen] = useState(true);
@@ -15,7 +16,7 @@ const SlideOver: React.FunctionComponent = () => {
         <div className="pr-6 w-full">
           <SearchBar />
         </div>
-        <NewButton setOpen={setOpen}/>
+        <NewButton setOpen={setOpen} />
       </div>
       <ContactList />
       <Transition.Root show={open} as={Fragment}>
@@ -44,12 +45,11 @@ const SlideOver: React.FunctionComponent = () => {
                   leaveFrom="translate-x-0"
                   leaveTo="translate-x-full"
                 >
-                  <Dialog.Panel className="pointer-events-auto w-screen max-w-md">
+                  <Dialog.Panel className="pointer-events-auto w-screen max-w-3xl">
                     <div className="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
                       <div className="px-4 sm:px-6">
                         <div className="flex items-start justify-between">
                           <Dialog.Title className="text-lg font-medium text-gray-900">
-                            Panel title
                           </Dialog.Title>
                           <div className="ml-3 flex h-7 items-center">
                             <button
@@ -67,15 +67,7 @@ const SlideOver: React.FunctionComponent = () => {
                         </div>
                       </div>
                       <div className="relative mt-6 flex-1 px-4 sm:px-6">
-                        {/* Replace with your content */}
-
-                        <div className="absolute inset-0 px-4 sm:px-6">
-                          <div
-                            className="h-full border-2 border-dashed border-gray-200"
-                            aria-hidden="true"
-                          />
-                        </div>
-                        {/* /End replace */}
+                        <SidePanel />
                       </div>
                     </div>
                   </Dialog.Panel>
@@ -86,37 +78,6 @@ const SlideOver: React.FunctionComponent = () => {
         </Dialog>
       </Transition.Root>
     </>
-    //     <>
-    //       <div className="drawer drawer-end">
-    //         <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
-    //         <div className="drawer-content">
-    //           <div className="flex flex-row justify-between w-full">
-    //             <div className="pr-6 w-full">
-    //               <SearchBar />
-    //             </div>
-    //             <NewButton />
-    //           </div>
-    //           <ContactList />
-    //           <label
-    //             htmlFor="my-drawer-4"
-    //             className="drawer-button btn btn-primary"
-    //           >
-    //             Open drawer
-    //           </label>
-    //         </div>
-    //         <div className="drawer-side">
-    //           <label htmlFor="my-drawer-4" className="drawer-overlay"></label>
-    //           <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
-    //             <li>
-    //               <a>Sidebar Item 1</a>
-    //             </li>
-    //             <li>
-    //               <a>Sidebar Item 2</a>
-    //             </li>
-    //           </ul>
-    //         </div>
-    //       </div>
-    // </>
   );
 };
 
