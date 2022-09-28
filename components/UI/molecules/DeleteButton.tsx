@@ -8,7 +8,7 @@ const DeleteButton: React.FunctionComponent = () => {
 
   return (
     <>
-      <Button title="Delete" type="error" action={deleteAction}/>
+      <Button title="Delete" action={deleteAction}/>
     </>
   )
 }

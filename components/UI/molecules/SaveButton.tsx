@@ -8,7 +8,7 @@ const SaveButton: React.FunctionComponent = () => {
 
   return (
     <>
-      <Button title="Save" type="success" action={saveAction}/>
+      <Button title="Save" action={saveAction}/>
     </>
   );
 };
