@@ -1,9 +1,11 @@
 import React from "react";
 import ContactCard from "../molecules/ContactCard";
 
-type ContactListProps = Array<{ name: string, email: string, birthday: string}>
+type ContactListProps =  {
+  contacts : Array<{ name: string, email: string, birthday: string}>;
+};
 
-const ContactList: React.FunctionComponent<ContactListProps> = ({contacts} : Array<ContactListProps>) => {
+const ContactList : React.FunctionComponent<ContactListProps> = ({contacts}) => {
   return (
     <>
       <div className="mt-2">
