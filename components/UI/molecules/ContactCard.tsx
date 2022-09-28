@@ -31,14 +31,14 @@ const ContactCard: React.FunctionComponent<ContactProps> = ({
   return (
     <>
       <button
-        className="w-full"
+        className="w-1/2"
         onClick={() => {
           select();
         }}
       >
-        <div className="card bg-base-100 shadow-xl">
-          <div className="card-body">
-            <h2 className="card-title justify-center ">{firstName} {lastName}</h2>
+        <div className="bg-base-100 border rounded-lg py-2 shadow-md hover:bg-gray-50">
+          <div className="text-left pl-4">
+            <h2 className="font-semibold text-xl ">{firstName} {lastName}</h2>
             <p>{email}</p>
             <p>{birthday}</p>
           </div>

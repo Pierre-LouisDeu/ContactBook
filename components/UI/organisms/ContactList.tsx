@@ -41,7 +41,7 @@ const ContactList: React.FunctionComponent<any> = ({ setOpen }) => {
             email: string;
             birthday: string;
           }) => (
-            <div className="py-2">
+            <div className="py-4">
               <ContactCard
                 key={contact.id}
                 id={contact.id}

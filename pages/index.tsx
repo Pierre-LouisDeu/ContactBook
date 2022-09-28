@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   const [contact, setContact] = useState(0);
   return (
     <ContactContext.Provider value={{ contact, setContact }}>
-      <div className="flex min-h-screen flex-col items-center justify-center py-2">
+      <div className="flex min-h-screen flex-col items-center justify-center py-4">
         <Head>
           <title>Contact Book</title>
           <link rel="icon" href="/favicon.ico" />

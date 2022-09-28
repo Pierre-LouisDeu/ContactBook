@@ -12,7 +12,7 @@ const SlideOver: React.FunctionComponent = () => {
 
   return (
     <>
-      <div className="flex flex-row justify-between w-full">
+      <div className="flex flex-row justify-between w-1/2">
         <div className="pr-6 w-full">
           <SearchBar />
         </div>
@@ -54,7 +54,7 @@ const SlideOver: React.FunctionComponent = () => {
                           <div className="ml-3 flex h-7 items-center">
                             <button
                               type="button"
-                              className="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                              className="rounded bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                               onClick={() => setOpen(false)}
                             >
                               <span className="sr-only">Close panel</span>
