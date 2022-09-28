@@ -18,7 +18,7 @@ const SlideOver: React.FunctionComponent = () => {
         </div>
         <NewButton setOpen={setOpen} />
       </div>
-      <ContactList />
+      <ContactList setOpen={setOpen}/>
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={setOpen}>
           <Transition.Child

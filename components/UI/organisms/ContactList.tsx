@@ -16,7 +16,7 @@ const contacts = [
   },
 ];
 
-const ContactList: React.FunctionComponent = () => {
+const ContactList: React.FunctionComponent<any> = ({setOpen}) => {
   return (
     <>
       <div className="mt-2 w-full">
@@ -29,6 +29,7 @@ const ContactList: React.FunctionComponent = () => {
                 name={contact.name}
                 email={contact.email}
                 birthday={contact.birthday}
+                setOpen={setOpen}
               />
             </div>
           )

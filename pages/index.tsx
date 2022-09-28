@@ -5,7 +5,7 @@ import SlideOver from "../components/templates/SlideOver";
 import { ContactContext } from "../context/ContactContext";
 
 const Home: NextPage = () => {
-  const [contact, setContact] = useState(0)
+  const [contact, setContact] = useState(0);
   return (
     <ContactContext.Provider value={{ contact, setContact }}>
       <div className="flex min-h-screen flex-col items-center justify-center py-2">
