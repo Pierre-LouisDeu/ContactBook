@@ -1,9 +1,13 @@
 import React from "react";
 
+type ActionType = {
+  (param: boolean): void;
+};
+
 type ButtonProps = {
   title: string;
   type: "success" | "error" | "primary";
-  action: any;
+  action: ActionType;
 };
 
 const Button: React.FunctionComponent<ButtonProps> = ({ title, type, action }) => {

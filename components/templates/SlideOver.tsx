@@ -15,7 +15,7 @@ const SlideOver: React.FunctionComponent = () => {
         <div className="pr-6 w-full">
           <SearchBar />
         </div>
-        <NewButton action={open} setOpen={setOpen}/>
+        <NewButton setOpen={setOpen}/>
       </div>
       <ContactList />
       <Transition.Root show={open} as={Fragment}>
