@@ -6,6 +6,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.2",
+    "@heroicons/react": "^2.0.11",
+    "@xmark/cli": "^2.0.5",
+    "daisyui": "^2.31.0",
+    "heroicons": "^2.0.11",
+    "json-server": "^0.17.0",
     "next": "latest",
     "react": "18.1.0",
     "react-dom": "18.1.0"
