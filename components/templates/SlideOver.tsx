@@ -8,7 +8,7 @@ import NewButton from "../UI/molecules/NewButton";
 import SidePanel  from "../UI/organisms/SidePanel";
 
 const SlideOver: React.FunctionComponent = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   return (
     <>
