@@ -1,24 +1,49 @@
-import React, { useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { ContactContext } from "../../../context/ContactContext";
 import Button from "../atoms/Button";
 import usePatch from "../../../hooks/usePatch";
 import usePost from "../../../hooks/usePost";
+import Banner from "./Banner";
 
 const SaveButton: React.FunctionComponent = () => {
   const { contact } = useContext(ContactContext);
   const { patchContact } = usePatch();
   const { postContact } = usePost();
+  const [missingData, setMissingData] = useState(false);
+
+  useEffect(() => {
+    if (missingData === true) {
+      setTimeout(() => {
+        setMissingData(false);
+      }, 3000);
+    }
+  }, [missingData]);
 
   const saveAction = () => {
-    if (contact.id) {
+    if (
+      contact.id &&
+      contact.firstName &&
+      contact.lastName &&
+      contact.email &&
+      contact.birthday
+    ) {
       patchContact(contact);
-    } else {
+    } else if (
+      contact.firstName &&
+      contact.lastName &&
+      contact.email &&
+      contact.birthday
+    ) {
       postContact(contact);
+    } else {
+      console.log("Missing data...");
+      setMissingData(true);
     }
   };
 
   return (
     <>
+      {missingData && <Banner title="Please complete the fields below" />}
       <Button title="Save" action={saveAction} />
     </>
   );

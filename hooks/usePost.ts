@@ -15,9 +15,6 @@ const usePost = () => {
   const postContact = async (contact: ContactType) => {
     await fetch('http://localhost:8000/contacts/', {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
       body: JSON.stringify(contact),
     })
       .then(() => {
