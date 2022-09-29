@@ -6,7 +6,7 @@ const SaveButton: React.FunctionComponent = () => {
   const { setOpen } = useContext(PanelContext);
 
   const saveAction = () => {
-    setOpen(false);
+    
   };
 
   return (
