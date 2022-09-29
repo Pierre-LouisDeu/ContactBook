@@ -1,17 +1,22 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import Button from "../atoms/Button";
 import { ContactContext } from "../../../context/ContactContext";
 
-const DeleteButton: React.FunctionComponent= () => {
+const DeleteButton: React.FunctionComponent = () => {
   const { contact } = useContext(ContactContext);
 
-  const deleteAction = () => {
-    console.log("delete contact n", typeof contact, contact.id);
-  };
+  async function deleteItem() {
+    const id = contact.id;
+    await fetch(`http://localhost:8000/contacts/${id}`, {
+      method: "DELETE",
+    })
+      .then(() => console.log("delete contact ", contact.id))
+      .catch((error) => console.log(error));
+  }
 
   return (
     <>
-      <Button title="Delete" action={deleteAction} />
+      <Button title="Delete" action={deleteItem} />
     </>
   );
 };

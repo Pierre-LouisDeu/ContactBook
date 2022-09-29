@@ -8,7 +8,7 @@ import useFetch from "../../../hooks/useFetch";
 
 const ContactList: React.FunctionComponent<any> = ({ setOpen }) => {
   const [contacts, isPending, error] = useFetch(
-    "http://localhost:8000/contacts"
+    'http://localhost:8000/contacts'
   );
 
   return (
