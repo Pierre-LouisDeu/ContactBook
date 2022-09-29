@@ -1,17 +1,22 @@
 import React, { useContext } from "react";
 import Button from "../atoms/Button";
-import { ReloadContext } from "../../../context/ReloadContext";
 import { ContactContext } from "../../../context/ContactContext";
+import { PanelContext } from "../../../context/PanelContext";
 import useDelete from "../../../hooks/useDelete";
 
 const DeleteButton: React.FunctionComponent = () => {
-  const { setReload } = useContext(ReloadContext);
+  const { setOpen } = useContext(PanelContext);
   const { contact } = useContext(ContactContext);
   const { deleteItem } = useDelete();
 
+  const deleteAction = () => {
+    deleteItem(contact.id);
+    setOpen(false);
+  };
+
   return (
     <>
-      <Button title="Delete" action={() => deleteItem(contact.id)} />
+      <Button title="Delete" action={deleteAction} />
     </>
   );
 };

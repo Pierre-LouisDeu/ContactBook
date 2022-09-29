@@ -1,9 +1,6 @@
 import React, { useContext } from "react";
 import { ContactContext } from "../../../context/ContactContext";
-
-type setOpenType = {
-  (param: boolean | null): void;
-};
+import { PanelContext } from "../../../context/PanelContext";
 
 type ContactProps = {
   id: number;
@@ -11,7 +8,6 @@ type ContactProps = {
   lastName: string;
   email: string;
   birthday: string;
-  setOpen: setOpenType;
 };
 
 const ContactCard: React.FunctionComponent<ContactProps> = ({
@@ -20,8 +16,8 @@ const ContactCard: React.FunctionComponent<ContactProps> = ({
   lastName,
   email,
   birthday,
-  setOpen,
 }) => {
+  const { setOpen } = useContext(PanelContext);
   const { setContact } = useContext(ContactContext);
   const select = () => {
     setContact({ id, firstName, lastName, email, birthday });

@@ -33,7 +33,6 @@ const ContactList: React.FunctionComponent<any> = ({ setOpen }) => {
                   lastName={contact.lastName}
                   email={contact.email}
                   birthday={contact.birthday}
-                  setOpen={setOpen}
                 />
               </div>
             )

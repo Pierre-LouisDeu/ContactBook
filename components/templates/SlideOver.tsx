@@ -1,14 +1,18 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useContext } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import Image from "next/image";
+import { PanelContext } from "../../context/PanelContext";
 import SearchBar from "..//UI/molecules/SearchBar";
 import ContactList from "../UI/organisms/ContactList";
 import NewButton from "../UI/molecules/NewButton";
-import SidePanel  from "../UI/organisms/SidePanel";
+import SidePanel from "../UI/organisms/SidePanel";
 
-const SlideOver: React.FunctionComponent = () => {
-  const [open, setOpen] = useState(false);
+type SlideOverPropsType = {
+  open: boolean;
+};
+
+const SlideOver: React.FunctionComponent<SlideOverPropsType> = ({ open }) => {
+  const { setOpen } = useContext(PanelContext);
 
   return (
     <>
@@ -16,9 +20,9 @@ const SlideOver: React.FunctionComponent = () => {
         <div className="pr-6 w-full">
           <SearchBar />
         </div>
-        <NewButton setOpen={setOpen} />
+        <NewButton />
       </div>
-      <ContactList setOpen={setOpen}/>
+      <ContactList setOpen={setOpen} />
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={setOpen}>
           <Transition.Child
@@ -48,8 +52,7 @@ const SlideOver: React.FunctionComponent = () => {
                     <div className="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
                       <div className="px-4 sm:px-6">
                         <div className="flex items-start justify-between">
-                          <Dialog.Title className="text-lg font-medium text-gray-900">
-                          </Dialog.Title>
+                          <Dialog.Title className="text-lg font-medium text-gray-900"></Dialog.Title>
                           <div className="ml-3 flex h-7 items-center">
                             <button
                               type="button"
