@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
-import Button from "../atoms/Button";
 import { PanelContext } from "../../../context/PanelContext";
+import Button from "../atoms/Button";
 
 const SaveButton: React.FunctionComponent = () => {
   const { setOpen } = useContext(PanelContext);
