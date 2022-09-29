@@ -8,13 +8,6 @@
       "birthday": "2022-09-09"
     },
     {
-      "id": 2,
-      "firstName": "Jef",
-      "lastName": "",
-      "email": "john-doe@gmail.com",
-      "birthday": "2022-09-09"
-    },
-    {
       "firstName": "Yan",
       "lastName": "Smitt",
       "email": "john.doe@gmail.com",
@@ -22,11 +15,32 @@
       "id": 3
     },
     {
-      "firstName": "a",
-      "lastName": "b",
-      "email": "john.doe@gmail.com",
+      "firstName": "Alex",
+      "lastName": "E.",
+      "email": "alex@email.com",
       "birthday": "22/01/1980",
       "id": 4
+    },
+    {
+      "firstName": "Jac",
+      "lastName": "Jo",
+      "email": "jean-francois.deu@cnam.fr",
+      "birthday": "2022-09-10",
+      "id": 5
+    },
+    {
+      "firstName": "Jef",
+      "lastName": "",
+      "email": "jean-francois.deu@cnam.fr",
+      "birthday": "2022-09-01",
+      "id": 6
+    },
+    {
+      "firstName": "John",
+      "lastName": "",
+      "email": "john@email.com",
+      "birthday": "2022-09-22",
+      "id": 7
     }
   ]
 }

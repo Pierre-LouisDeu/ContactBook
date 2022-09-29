@@ -1,19 +1,25 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { ContactContext } from "../../../context/ContactContext";
 import Button from "../atoms/Button";
 import usePatch from "../../../hooks/usePatch";
+import usePost from "../../../hooks/usePost";
 
 const SaveButton: React.FunctionComponent = () => {
   const { contact } = useContext(ContactContext);
   const { patchContact } = usePatch();
+  const { postContact } = usePost();
 
   const saveAction = () => {
-    patchContact(contact)
+    if (contact.id) {
+      patchContact(contact);
+    } else {
+      postContact(contact);
+    }
   };
 
   return (
     <>
-      <Button title="Save" action={saveAction}/>
+      <Button title="Save" action={saveAction} />
     </>
   );
 };
