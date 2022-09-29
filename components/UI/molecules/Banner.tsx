@@ -11,8 +11,8 @@ const Banner: React.FunctionComponent<BannerPropsType> = ({ title }) => {
   if (!isHidden) {
     return (
       <div className="fixed inset-x-0 top-0 pt-2">
-        <div className="mx-auto max-w-7xl pr-32 pl-2">
-          <div className="rounded-lg bg-indigo-600 p-2 shadow-lg sm:p-3 opacity-90 hover:opacity-80">
+        <div className="mx-auto max-w-7xl pr-2 pl-2">
+          <div className="rounded-lg bg-indigo-600 p-2 shadow-lg hover:bg-indigo-500">
             <div className="flex flex-wrap items-center justify-between">
               <div className="flex w-0 flex-1 items-center">
                 <span className="flex rounded-lg bg-indigo-800 p-2">
@@ -29,7 +29,7 @@ const Banner: React.FunctionComponent<BannerPropsType> = ({ title }) => {
               <div className="order-2 flex-shrink-0 sm:order-3 sm:ml-2">
                 <button
                   type="button"
-                  className="-mr-1 flex rounded-md p-2 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white"
+                  className="-mr-1 flex rounded-md p-2 hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-white"
                   onClick={() => {
                     setIsHidden(true);
                   }}

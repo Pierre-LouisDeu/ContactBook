@@ -19,7 +19,7 @@ const SidePanel: React.FunctionComponent = () => {
             <div className="pr-6">
               <SaveButton />
             </div>
-            <DeleteButton />
+            {contact.id && <DeleteButton />}
           </div>
         </div>
       </div>

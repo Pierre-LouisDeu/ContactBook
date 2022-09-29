@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ContactCard from "../molecules/ContactCard";
 import useFetch from "../../../hooks/useFetch";
+import Banner from "../molecules/Banner";
 
 // type ContactListProps =  {
 //   contacts : Array<{ name: string, email: string, birthday: string}>;
@@ -8,13 +9,17 @@ import useFetch from "../../../hooks/useFetch";
 
 const ContactList: React.FunctionComponent<any> = ({ setOpen }) => {
   const [contacts, isPending, error] = useFetch(
-    'http://localhost:8000/contacts'
+    "http://localhost:8000/contacts"
   );
 
   return (
     <>
       <div className="mt-2 w-full">
-        {error && <div>{error}</div>}
+        {error && (
+          <div>
+            <Banner title={error} />
+          </div>
+        )}
         {isPending && <div>Loading...</div>}
         {contacts &&
           contacts.map(
