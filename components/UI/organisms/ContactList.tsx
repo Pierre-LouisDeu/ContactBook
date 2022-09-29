@@ -3,14 +3,12 @@ import ContactCard from "../molecules/ContactCard";
 import useFetch from "../../../hooks/useFetch";
 import Banner from "../molecules/Banner";
 
-// type ContactListProps =  {
-//   contacts : Array<{ name: string, email: string, birthday: string}>;
-// };
+type ContactListProps = {
+  url: string;
+};
 
-const ContactList: React.FunctionComponent<any> = ({ setOpen }) => {
-  const [contacts, isPending, error] = useFetch(
-    "http://localhost:8000/contacts"
-  );
+const ContactList: React.FunctionComponent<ContactListProps> = ({ url }) => {
+  const [contacts, isPending, error] = useFetch(url);
 
   return (
     <>

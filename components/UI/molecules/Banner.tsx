@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { MegaphoneIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
-type BannerPropsType = {
+type BannerProps = {
   title: string;
 }
 
-const Banner: React.FunctionComponent<BannerPropsType> = ({ title }) => {
+const Banner: React.FunctionComponent<BannerProps> = ({ title }) => {
   const [isHidden, setIsHidden] = useState(false);
 
   if (!isHidden) {
     return (
-      <div className="fixed inset-x-0 top-0 pt-2">
+      <div className="fixed inset-x-0 top-0 pt-2 z-10">
         <div className="mx-auto max-w-7xl pr-2 pl-2">
           <div className="rounded-lg bg-indigo-600 p-2 shadow-lg hover:bg-indigo-500">
             <div className="flex flex-wrap items-center justify-between">

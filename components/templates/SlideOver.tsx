@@ -7,22 +7,23 @@ import ContactList from "../UI/organisms/ContactList";
 import NewButton from "../UI/molecules/NewButton";
 import SidePanel from "../UI/organisms/SidePanel";
 
-type SlideOverPropsType = {
+type SlideOverProps = {
   open: boolean;
 };
 
-const SlideOver: React.FunctionComponent<SlideOverPropsType> = ({ open }) => {
+const SlideOver: React.FunctionComponent<SlideOverProps> = ({ open }) => {
   const { setOpen } = useContext(PanelContext);
+  const [url, setUrl] = useState("http://localhost:8000/contacts");
 
   return (
     <>
       <div className="flex flex-row justify-between w-1/2">
         <div className="pr-6 w-full">
-          <SearchBar />
+          <SearchBar setUrl={setUrl}/>
         </div>
         <NewButton />
       </div>
-      <ContactList setOpen={setOpen} />
+      <ContactList url={url} />
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={setOpen}>
           <Transition.Child
