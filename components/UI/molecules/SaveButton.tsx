@@ -23,14 +23,12 @@ const SaveButton: React.FunctionComponent = () => {
     if (
       contact.id &&
       contact.firstName &&
-      contact.lastName &&
       contact.email &&
       contact.birthday
     ) {
       patchContact(contact);
     } else if (
       contact.firstName &&
-      contact.lastName &&
       contact.email &&
       contact.birthday
     ) {

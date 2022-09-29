@@ -22,10 +22,10 @@
       "id": 4
     },
     {
-      "firstName": "Jac",
-      "lastName": "Jo",
-      "email": "jean-francois.deu@cnam.fr",
-      "birthday": "2022-09-10",
+      "firstName": "Juliette",
+      "lastName": "Z.",
+      "email": "jz@email.com",
+      "birthday": "1999-09-09",
       "id": 5
     },
     {
@@ -43,10 +43,39 @@
       "id": 7
     },
     {
-      "id": 8,
-      "firstName": "Jef",
+      "firstName": "Léo",
+      "lastName": "L.",
+      "email": "leo@email.com",
+      "birthday": "2022-09-10",
+      "id": 8
+    },
+    {
+      "firstName": "Pierre-Louis",
       "lastName": "",
-      "email": "pierrelouisdeu@gmail.com"
+      "email": "notification@koreliz.com",
+      "birthday": "111111-11-11",
+      "id": 9
+    },
+    {
+      "firstName": "Albine",
+      "lastName": "Z.",
+      "email": "albinez@email.com",
+      "birthday": "2022-09-11",
+      "id": 10
+    },
+    {
+      "firstName": "Jack",
+      "lastName": "Nicholson",
+      "email": "jack@email.com",
+      "birthday": "1969-09-24",
+      "id": 11
+    },
+    {
+      "firstName": "Emanuel",
+      "lastName": "T.",
+      "email": "emanuelt@email.com",
+      "birthday": "2022-09-01",
+      "id": 12
     }
   ]
 }

@@ -13,12 +13,13 @@ const usePost = () => {
   };
 
   const postContact = async (contact: ContactType) => {
-    await fetch('http://localhost:8000/contacts/', {
+    await fetch("http://localhost:8000/contacts/", {
       method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(contact),
     })
       .then(() => {
-        console.log("Contact added");
+        console.log("Contact added", contact);
         setReload(true);
       })
       .catch((error) => {

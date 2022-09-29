@@ -10,7 +10,7 @@ const useDelete = () => {
     })
       .then(() => {
         setReload(true);
-        console.log("Contact deletd");
+        console.log('Contact deleted');
       })
       .catch((error) => {
         console.log(error.message);
