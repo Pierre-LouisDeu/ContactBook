@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ContactCard from "../molecules/ContactCard";
 
 // type ContactListProps =  {
@@ -30,6 +30,16 @@ const contacts = [
 ];
 
 const ContactList: React.FunctionComponent<any> = ({ setOpen }) => {
+  const [contacts, setContacts] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/contacts").then((res) =>
+      res.json().then((data) => {
+        setContacts(data);
+      })
+    );
+  }, []);
+
   return (
     <>
       <div className="mt-2 w-full">

@@ -1,0 +1,28 @@
+{
+  "contacts": [
+    {
+      "firstName": "John",
+      "lastName": "Smith",
+      "email": "john.doe@gmail.com",
+      "birthday": "22/01/1980",
+      "info": {
+        "address": "123 Main Street",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10001"
+      }
+    },
+    {
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "email": "JaneDoe@gmail.com",
+      "birthday": "22/01/1980",
+      "info": {
+        "address": "123 Main Street",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10001"
+      }
+    }
+  ]
+}
