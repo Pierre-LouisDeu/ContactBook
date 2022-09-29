@@ -20,7 +20,7 @@ const Home: NextPage = () => {
               <title>Contact Book</title>
               <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center pt-6">
+            <main className="flex w-full flex-1 flex-col px-20 text-center pt-6 items-center pt-24">
               <SlideOver open={open} />
             </main>
           </div>
