@@ -9,6 +9,7 @@ const usePost = () => {
     lastName: string;
     email: string;
     birthday: string;
+    info: string;
     id: number;
   };
 

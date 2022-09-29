@@ -1,18 +1,20 @@
 {
   "contacts": [
     {
-      "id": 1,
       "firstName": "Pierre-Louis",
-      "lastName": "",
+      "lastName": "Deü",
       "email": "pierrelouisdeu@gmail.com",
-      "birthday": "2022-09-09"
+      "birthday": "2022-09-09",
+      "info": "I should really use faker.js..",
+      "id": 1
     },
     {
       "firstName": "Yan",
       "lastName": "Smitt",
       "email": "john.doe@gmail.com",
       "birthday": "2022-09-09",
-      "id": 3
+      "id": 3,
+      "info": ""
     },
     {
       "firstName": "Alex",

@@ -27,6 +27,7 @@ const ContactList: React.FunctionComponent<ContactListProps> = ({ url }) => {
               lastName: string;
               email: string;
               birthday: string;
+              info: string;
             }) => (
               <div className="py-4">
                 <ContactCard
@@ -36,6 +37,7 @@ const ContactList: React.FunctionComponent<ContactListProps> = ({ url }) => {
                   lastName={contact.lastName}
                   email={contact.email}
                   birthday={contact.birthday}
+                  info={contact.info}
                 />
               </div>
             )

@@ -8,6 +8,7 @@ type ContactProps = {
   lastName: string;
   email: string;
   birthday: string;
+  info: string;
 };
 
 const ContactCard: React.FunctionComponent<ContactProps> = ({
@@ -16,11 +17,12 @@ const ContactCard: React.FunctionComponent<ContactProps> = ({
   lastName,
   email,
   birthday,
+  info,
 }) => {
   const { setOpen } = useContext(PanelContext);
   const { setContact } = useContext(ContactContext);
   const select = () => {
-    setContact({ id, firstName, lastName, email, birthday });
+    setContact({ id, firstName, lastName, email, birthday, info });
     setOpen(true);
   };
 

@@ -55,8 +55,15 @@ const EditableFields: React.FunctionComponent = () => {
           {contact.birthday}
         </button>
       )}
-
-      <div className="border-2 border-dashed border-gray-200 h-full my-12 px-4 py-2"></div>
+      <textarea
+        rows={3}
+        name="comment"
+        id="comment"
+        placeholder="Add informations..."
+        className="mt-8 mb-32 px-4 resize-none h-full block w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500"
+        defaultValue={contact.info}
+        onChange={(e) => setContact({ ...contact, info: e.target.value })}
+      />
     </>
   );
 };
