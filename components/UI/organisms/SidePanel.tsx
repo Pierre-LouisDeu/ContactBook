@@ -5,6 +5,7 @@ import { ContactContext } from "../../../context/ContactContext";
 
 const SidePanel: React.FunctionComponent = () => {
   const { contact } = useContext(ContactContext);
+  console.log(contact);
   return (
     <>
       <div className="h-full">
