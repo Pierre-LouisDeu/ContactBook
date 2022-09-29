@@ -23,14 +23,13 @@ const SlideOver: React.FunctionComponent = () => {
         <Dialog as="div" className="relative z-10" onClose={setOpen}>
           <Transition.Child
             as={Fragment}
-            enter="ease-in-out duration-500"
             enterFrom="opacity-0"
             enterTo="opacity-100"
             leave="ease-in-out duration-500"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+            <div className="fixed inset-0 bg-gray-500 bg-opacity-80 backdrop-blur-md transition-opacity" />
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-hidden">
