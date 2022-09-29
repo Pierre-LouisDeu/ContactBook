@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import { ReloadContext } from "../context/ReloadContext";
 
 const useFetch = (url: string): Array<any> => {
-  const { reload } = useContext(ReloadContext);
+  const { reload, setReload } = useContext(ReloadContext);
   const [data, setData] = useState(null);
   const [isPending, setIsPending] = useState(true);
   const [error, setError] = useState(null);
@@ -19,6 +19,7 @@ const useFetch = (url: string): Array<any> => {
         setData(data);
         setIsPending(false);
         setError(null);
+        setReload(false);
       })
       .catch((err) => {
         setIsPending(false);

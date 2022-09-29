@@ -1,12 +1,14 @@
 import React, {useContext} from "react";
-import { PanelContext } from "../../../context/PanelContext";
+import { ContactContext } from "../../../context/ContactContext";
 import Button from "../atoms/Button";
+import usePatch from "../../../hooks/usePatch";
 
 const SaveButton: React.FunctionComponent = () => {
-  const { setOpen } = useContext(PanelContext);
+  const { contact } = useContext(ContactContext);
+  const { patchContact } = usePatch();
 
   const saveAction = () => {
-    
+    patchContact(contact)
   };
 
   return (
