@@ -13,6 +13,13 @@
       "lastName": "Doe",
       "email": "JaneDoe@gmail.com",
       "birthday": "22/01/1980"
+    },
+    {
+      "firstName": "Yan",
+      "lastName": "Smith",
+      "email": "john.doe@gmail.com",
+      "birthday": "22/01/1980",
+      "id": 2
     }
   ]
 }

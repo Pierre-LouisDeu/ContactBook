@@ -1,22 +1,17 @@
 import React, { useContext } from "react";
 import Button from "../atoms/Button";
+import { ReloadContext } from "../../../context/ReloadContext";
 import { ContactContext } from "../../../context/ContactContext";
+import useDelete from "../../../hooks/useDelete";
 
 const DeleteButton: React.FunctionComponent = () => {
+  const { setReload } = useContext(ReloadContext);
   const { contact } = useContext(ContactContext);
-
-  async function deleteItem() {
-    const id = contact.id;
-    await fetch(`http://localhost:8000/contacts/${id}`, {
-      method: "DELETE",
-    })
-      .then(() => console.log("delete contact ", contact.id))
-      .catch((error) => console.log(error));
-  }
+  const { deleteItem } = useDelete();
 
   return (
     <>
-      <Button title="Delete" action={deleteItem} />
+      <Button title="Delete" action={() => deleteItem(contact.id)} />
     </>
   );
 };
