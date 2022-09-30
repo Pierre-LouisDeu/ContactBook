@@ -13,7 +13,7 @@ type SlideOverProps = {
 
 const SlideOver: React.FunctionComponent<SlideOverProps> = ({ open }) => {
   const { setOpen } = useContext(PanelContext);
-  const [url, setUrl] = useState("http://localhost:8000/contacts");
+  const [url, setUrl] = useState("http://localhost:8000/contacts?_sort=id&_order=desc");
 
   return (
     <>

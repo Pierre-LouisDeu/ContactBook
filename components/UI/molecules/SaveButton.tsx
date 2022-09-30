@@ -6,7 +6,7 @@ import usePost from "../../../hooks/usePost";
 import Banner from "./Banner";
 
 const SaveButton: React.FunctionComponent = () => {
-  const { contact } = useContext(ContactContext);
+  const { contact, setContact } = useContext(ContactContext);
   const { patchContact } = usePatch();
   const { postContact } = usePost();
   const [missingData, setMissingData] = useState(false);
@@ -20,18 +20,10 @@ const SaveButton: React.FunctionComponent = () => {
   }, [missingData]);
 
   const saveAction = () => {
-    if (
-      contact.id &&
-      contact.firstName &&
-      contact.email &&
-      contact.birthday
-    ) {
+    if (contact.id && contact.firstName && contact.email && contact.birthday) {
       patchContact(contact);
-    } else if (
-      contact.firstName &&
-      contact.email &&
-      contact.birthday
-    ) {
+    } else if (contact.firstName && contact.email && contact.birthday) {
+      // setContact({ ...contact, id: 1});
       postContact(contact);
     } else {
       console.log("Missing data...");

@@ -20,7 +20,6 @@ const usePost = () => {
       body: JSON.stringify(contact),
     })
       .then(() => {
-        console.log("Contact added", contact);
         setReload(true);
       })
       .catch((error) => {
