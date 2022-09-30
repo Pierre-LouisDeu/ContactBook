@@ -20,7 +20,6 @@ const usePatch = () => {
       body: JSON.stringify(contact),
     })
       .then(() => {
-        console.log("Contact updated");
         setReload(true);
       })
       .catch((error) => {

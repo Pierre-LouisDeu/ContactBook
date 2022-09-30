@@ -29,9 +29,8 @@ const ContactList: React.FunctionComponent<ContactListProps> = ({ url }) => {
               birthday: string;
               info: string;
             }) => (
-              <div className="py-4">
+              <div className="py-4" key={contact.id}>
                 <ContactCard
-                  key={contact.id}
                   id={contact.id}
                   firstName={contact.firstName}
                   lastName={contact.lastName}
