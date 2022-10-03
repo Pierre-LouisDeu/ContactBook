@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ReloadContext } from "../context/ReloadContext";
+import { ReloadContext } from "../contexts/ReloadContext";
 
 const usePost = () => {
   const { setReload } = useContext(ReloadContext);

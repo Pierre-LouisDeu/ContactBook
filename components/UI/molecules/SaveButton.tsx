@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { ContactContext } from "../../../context/ContactContext";
+import { ContactContext } from "../../../contexts/ContactContext";
 import Button from "../atoms/Button";
 import usePatch from "../../../hooks/usePatch";
 import usePost from "../../../hooks/usePost";

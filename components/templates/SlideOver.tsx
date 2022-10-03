@@ -1,7 +1,7 @@
 import { Fragment, useState, useContext } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import { PanelContext } from "../../context/PanelContext";
+import { PanelContext } from "../../contexts/PanelContext";
 import SearchBar from "..//UI/molecules/SearchBar";
 import ContactList from "../UI/organisms/ContactList";
 import NewButton from "../UI/molecules/NewButton";

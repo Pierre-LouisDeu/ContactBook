@@ -3,7 +3,7 @@ import SaveButton from "../molecules/SaveButton";
 import DeleteButton from "../molecules/DeleteButton";
 import EditableFields from "../molecules/EditableFields";
 import Banner from "../molecules/Banner";
-import { ContactContext } from "../../../context/ContactContext";
+import { ContactContext } from "../../../contexts/ContactContext";
 
 const SidePanel: React.FunctionComponent = () => {
   const { contact } = useContext(ContactContext);

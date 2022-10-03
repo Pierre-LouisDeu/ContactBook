@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { ReloadContext } from "../context/ReloadContext";
+import { ReloadContext } from "../contexts/ReloadContext";
 
 const useDelete = () => {
   const { setReload } = useContext(ReloadContext);

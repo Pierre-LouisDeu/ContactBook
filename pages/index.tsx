@@ -2,9 +2,9 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import React, { useContext, useState } from "react";
 import SlideOver from "../components/templates/SlideOver";
-import { ReloadContext } from "../context/ReloadContext";
-import { ContactContext } from "../context/ContactContext";
-import { PanelContext } from "../context/PanelContext";
+import { ReloadContext } from "../contexts/ReloadContext";
+import { ContactContext } from "../contexts/ContactContext";
+import { PanelContext } from "../contexts/PanelContext";
 
 const Home: NextPage = () => {
   const [reload, setReload] = useState(false);

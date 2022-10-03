@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { ContactContext } from "../../../context/ContactContext";
-import { PanelContext } from "../../../context/PanelContext";
+import { ContactContext } from "../../../contexts/ContactContext";
+import { PanelContext } from "../../../contexts/PanelContext";
 import useDelete from "../../../hooks/useDelete";
 import Button from "../atoms/Button";
 
